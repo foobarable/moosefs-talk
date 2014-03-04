@@ -1,0 +1,15 @@
+\frametitle{Plattformen}
+\begin{block}{Clients (aka mfsmount): Alle mit funktionierender FUSE Implementierung}
+\begin{itemize}
+\item Linux (ab Version 2.6.14)
+\item FreeBSD
+\item OpenSolaris
+\item MacOS X
+\end{itemize}
+\end{block}
+\begin{block}{Nur Server, Metalogger und Chunkserver}
+\begin{itemize}
+\item Solaris
+\item Windows mit Cygwin
+\end{itemize}
+\end{block
