@@ -230,15 +230,39 @@
 	\includegraphics[scale=0.3]{write.png}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Goals}
+	F\"ur jede Datei kann seperat angegeben werden, wieviele Kopien von ihr vorliegen sollen.
+
+	\begin{description}
+		\item mfsgetgoal [-r] Dateiname
+		\item mfssetgoal [-r] Dateiname
+	\end{description}
+
+\end{frame}
+
 
 \section{Elchtest}
 \subsection*{}
 
 \begin{frame}
-	\frametitle{Elchtest - Oder: Wir bauen uns ein guenstiges Netzlaufwerk}
+	\frametitle{Elchtest - Oder: Wir bauen uns ein g\"unstiges Netzlaufwerk}
 	\centering
 	\includegraphics[scale=0.5]{elchtest.jpg}	
 \end{frame}
+
+\begin{frame}
+	\frametitle{Ausgangssituation}
+
+	\begin{itemize}
+		\item Viele Arbeitsplatzrechner
+		\item Viel ungenutzter Speicher
+		\item Aber: Unzuverl\"assig
+	\end{itemize}
+	Frage: Kann MFS ein zuverlaessiger Datenspeicher sein mit unzuverl\"assigen Chunkservern? 
+
+\end{frame}
+
 
 \begin{frame}
 	\frametitle{Master}
@@ -252,7 +276,10 @@
 	
 
 \begin{frame}
-	\frametitle{Mfscgiserv}
+	\frametitle{Optional: Mfscgiserv}
+
+	CGI-Skript zum Monitoring	
+	\includegraphics[scale=0.2]{moosefs-status.png}
 \end{frame}
 
 \begin{frame}
@@ -272,6 +299,34 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Installation Chunkserver}
+	\begin{block}{Vorraussetzungen} 
+	\begin{itemize}
+		\item F\"ur Moosefs dediziertes Dateisystem 
+		\begin{itemize}
+			\item Eigene Partition
+			\item Loop Mount einer Datei mit Dateisystem
+		\end{itemize}
+		\item Hinzugef\"ugte Paketquellen
+	\end{itemize}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Installation Chunkserver}
+	\begin{block}{Installation}
+	\begin{itemize}
+		\item apt-get install mfs-chunkserver
+		\item cp /etc/mfs/mfschunkserver.cfg.dist /etc/mfs/mfschunkserver.cfg
+		\item Konfiguration des Speicherorts f\"ur Chunkserver
+		\item /etc/init.d/mfschunkserver start
+	\end{itemize}
+	\end{block}
+\end{frame}	
+
+
 \section{Fazit}
 \subsection*{}
 
@@ -279,6 +334,7 @@
 \subsection*{}
 
 \begin{frame}
+	
 	\frametitle{Fragen?}
 	\begin{center}
 		\large Fragen?
